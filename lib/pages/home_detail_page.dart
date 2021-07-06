@@ -10,7 +10,9 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       backgroundColor: MyTheme.creamColor,
       bottomNavigationBar: Container(
         color: Colors.white,
@@ -28,8 +30,8 @@ class HomeDetailPage extends StatelessWidget {
                   StadiumBorder(),
                 ),
               ),
-              child: "Buy".text.make(),
-            ).wh(100, 50),
+              child: "Add to cart".text.make(),
+            ).wh(120, 50),
           ],
         ).p32(),
       ),
@@ -59,6 +61,13 @@ class HomeDetailPage extends StatelessWidget {
                           .make(),
                       catalog.desc.text.color(Colors.grey.shade600).xl.make(),
                       10.heightBox,
+                      "This will show the information related to the prduct like its images its functionality or some description about the product or its availability and many more things according to the developer."
+                          .text
+                          .lg
+                          .color(Colors.grey.shade600)
+                          .make()
+                          .p16()
+                          .expand(),
                     ],
                   ).py64(),
                 ),
